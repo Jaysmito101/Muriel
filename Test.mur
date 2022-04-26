@@ -1,0 +1,9 @@
+int a = 5458;
+
+namespace abc{
+    class H{
+        void Main(String arhs[]){
+            System.out.println("Hello World");
+        }
+    };
+}
