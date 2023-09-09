@@ -1,0 +1,6 @@
+include (core.stdio) as stdio
+
+
+global {
+    
+}

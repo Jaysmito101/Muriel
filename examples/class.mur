@@ -1,0 +1,39 @@
+
+
+vector {
+
+    add(a, b) {
+        return {{ x: a.x + b.x, y: a.y + b.y, z: a.z + b.z }}
+    }
+
+    normalize(a) {
+        var len = math.sqrt(a.x * a.x + a.y * a.y + a.z * a.z)
+        return {{ x: a.x / len, y: a.y / len, z: a.z / len }}
+    }
+
+}
+
+global {
+    
+    Vector3(x, y, z) {
+        return {{
+            x: x,
+            y: y,
+            z: z,
+            @normalize :vector.normalize,
+            __add__ :vector.add
+        }}
+    }
+
+
+    main(args) {
+        var a = Vector3(1, 2, 3)
+        var b = Vector3(4, 5, 6)
+        var c = a + b
+        c = c.normalize()
+        print(c.x)
+        print(c.y)
+        print(c.z)
+    }
+
+}

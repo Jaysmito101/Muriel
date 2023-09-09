@@ -1,0 +1,118 @@
+include (core.stdio) as stdio
+
+# dsfds
+
+extern {
+    sqrtf(float, float) -> float
+}
+
+something {
+    binarySearch(arr, start, end) {
+        if start > end {
+            return -1
+        }
+
+        mid = (start + end) / 2
+
+        if arr[mid] == 0 {
+            return mid
+        } elif arr[mid] == 1 {
+            return binarySearch(arr, mid + 1, end)
+        } else {
+            return binarySearch(arr, start, mid - 1)
+        }
+    }
+
+    mergeSort(arr, start, end) {
+        if start < end {
+            mid = (start + end) / 2
+            mergeSort(arr, start, mid)
+            mergeSort(arr, mid + 1, end)
+            
+            # merge(arr, start, mid, end)
+            new_arr = []
+            i = start
+            j = mid + 1
+            while i <= mid && j <= end {
+                if arr[i] < arr[j] {
+                    new_arr.push(arr[i])
+                    i = i + 1
+                } else {
+                    new_arr.push(arr[j])
+                    j = j + 1
+                }
+            }
+
+            while i <= mid {
+                new_arr.push(arr[i])
+                i = i + 1
+            }
+
+            while j <= end {
+                new_arr.push(arr[j])
+                j = j + 1
+            }
+
+        }
+    }
+
+    some() {
+        if 92 > 14523 {
+           while (fnjmkjdsl) {
+                loop {
+                    a = 5 + 4
+                }
+           }
+        } else {
+           return 1
+        }
+
+
+        while true + 4 == 3 {
+            
+        }
+
+    }
+
+    toString(digit) {
+        switch digit {
+            0: { 
+                return "0"
+            }
+            1: { 
+                return "1"
+            }
+            2: { 
+               return "2"
+            }
+            3: { 
+                return "3"
+            }
+            
+        }
+    }
+}
+
+global {
+
+    factorial(n) {
+        if n == 0 {
+            return 1
+        } else {
+            return n * factorial(n - 1)
+        }
+    }
+
+    something2() {
+        loop {
+            # fds
+        }
+    }
+
+    main(args) {
+
+        # stdio.printf("Hello World!\n")
+
+    }
+}
+

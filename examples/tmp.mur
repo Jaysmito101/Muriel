@@ -1,0 +1,22 @@
+global {
+    toString(digit) {
+        switch digit {
+            0: { 
+                return "0"
+            }
+            1: { 
+                return "1"
+            }
+            2: { 
+               return "2"
+            }
+            3: { 
+                return "3"
+            }
+            sad : {
+                asdsa
+            }
+            
+        }
+    }
+}
